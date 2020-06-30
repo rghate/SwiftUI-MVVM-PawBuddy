@@ -17,18 +17,40 @@ struct ContentView: View {
             
             List {
                 ForEach(dogsVM.dogs) { dog in
-                    Text(dog.name)
+                    HStack(spacing: 10) {
+                        Image(dog.thumbnail)
+                            .resizable()
+                            .clipped()
+                            .scaledToFit()
+                            .frame(width: 60, height: 60)
+                            .clipShape(Circle())
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 50.0)
+                                    .strokeBorder(style: StrokeStyle(lineWidth: 0.5))
+                                    .foregroundColor(.init(white: 0.5)))
+                        
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(dog.name)
+                                .fontWeight(.medium)
+                                .font(.system(size: 24))
+                            Text(dog.breed)
+                        }
+                        
+                        Spacer()
+                        Text(dog.gender)
+                    }
                 }
+                .frame(height: 70)
             }
             .navigationBarTitle("Paw Buddy")
             .navigationBarItems(trailing: Button(action: {
                 
             }, label: {
-                NavigationLink(destination: NewDogView()) {
-                    Text("Add New Dog")
+                NavigationLink(destination: NewDogView(name: "", breed: "")) {
+                    Image(systemName: "plus").foregroundColor(.black)
                 }
             }))
-        }
+        }.navigationBarTitle("", displayMode: .inline)
     }
 }
 
