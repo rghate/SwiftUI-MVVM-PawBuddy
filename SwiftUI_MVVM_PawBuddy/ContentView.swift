@@ -10,15 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var dogsVM = DogViewModel()
+    @ObservedObject var dogsVM = DogViewModel()
     
     var body: some View {
         NavigationView {
-            
             List {
                 ForEach(dogsVM.dogs) { dog in
                     HStack(spacing: 10) {
-                        Image(dog.thumbnail)
+                        Image(dog.thumbnail ?? "dog_logo")
                             .resizable()
                             .clipped()
                             .scaledToFit()
@@ -35,7 +34,7 @@ struct ContentView: View {
                                 .font(.system(size: 24))
                             Text(dog.breed)
                         }
-                        
+
                         Spacer()
                         Text(dog.gender)
                     }
@@ -46,9 +45,11 @@ struct ContentView: View {
             .navigationBarItems(trailing: Button(action: {
                 
             }, label: {
-                NavigationLink(destination: NewDogView(name: "", breed: "")) {
+                NavigationLink(destination: NewDogView(didAddDog: { dog  in
+                    self.dogsVM.addDog(dog: dog) // this will update the dog array in viewmodel( an observable obj), which will update the List UI.
+                }), label: {
                     Image(systemName: "plus").foregroundColor(.black)
-                }
+                })
             }))
         }.navigationBarTitle("", displayMode: .inline)
     }

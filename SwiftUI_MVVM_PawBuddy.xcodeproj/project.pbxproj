@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2B0AF1224AD420800D47330 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF1124AD420800D47330 /* ImagePickerView.swift */; };
 		C2F5345424AB922D00E80AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5345324AB922D00E80AB2 /* AppDelegate.swift */; };
 		C2F5345624AB922D00E80AB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5345524AB922D00E80AB2 /* SceneDelegate.swift */; };
 		C2F5345824AB922D00E80AB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5345724AB922D00E80AB2 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2B0AF1124AD420800D47330 /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		C2F5345024AB922D00E80AB2 /* SwiftUI_MVVM_PawBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_MVVM_PawBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F5345324AB922D00E80AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2F5345524AB922D00E80AB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				C2F5346724AB935E00E80AB2 /* Dog.swift */,
 				C2F5346924AB93AB00E80AB2 /* DogViewModel.swift */,
 				C2F5346B24AB99D800E80AB2 /* NewDogView.swift */,
+				C2B0AF1124AD420800D47330 /* ImagePickerView.swift */,
 			);
 			path = SwiftUI_MVVM_PawBuddy;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				C2F5345624AB922D00E80AB2 /* SceneDelegate.swift in Sources */,
 				C2F5346A24AB93AB00E80AB2 /* DogViewModel.swift in Sources */,
 				C2F5346824AB935E00E80AB2 /* Dog.swift in Sources */,
+				C2B0AF1224AD420800D47330 /* ImagePickerView.swift in Sources */,
 				C2F5345824AB922D00E80AB2 /* ContentView.swift in Sources */,
 				C2F5346C24AB99D800E80AB2 /* NewDogView.swift in Sources */,
 			);

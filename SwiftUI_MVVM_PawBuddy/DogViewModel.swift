@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct DogViewModel {
+class DogViewModel: ObservableObject {
     
-    var dogs: [Dog] = [Dog(name: "Bella", breed: "Shih Tzu", gender: "Female", thumbnail: "bella"),
+    @Published var dogs: [Dog] = [Dog(name: "Bella", breed: "Shih Tzu", gender: "Female", thumbnail: "bella"),
                                   Dog(name: "Coco", breed: "Labradore", gender: "Male", thumbnail: "coco"),
                                   Dog(name: "Cuddles", breed: "Golden Retriever", gender: "Male", thumbnail: "cuddles")
     ]
     
-    func addDog() {
-        
+    func addDog(dog: Dog) {
+        self.dogs.append(dog)
     }
 }

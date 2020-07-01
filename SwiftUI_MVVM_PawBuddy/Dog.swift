@@ -14,5 +14,5 @@ struct Dog: Identifiable {
     let name: String
     let breed: String
     let gender: String
-    let thumbnail: String
+    let thumbnail: String?
 }
