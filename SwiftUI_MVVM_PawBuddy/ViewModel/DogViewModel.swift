@@ -6,16 +6,33 @@
 //  Copyright © 2020 rghate. All rights reserved.
 //
 
-import Foundation
-
+import SwiftUI
+import CoreData
 class DogViewModel: ObservableObject {
     
-    @Published var dogs: [Dog] = [Dog(name: "Bella", breed: "Shih Tzu", gender: "Female", pictureData: nil),
-                                  Dog(name: "Coco", breed: "Labradore", gender: "Male", pictureData: nil),
-                                  Dog(name: "Cuddles", breed: "Golden Retriever", gender: "Male", pictureData: nil)
-    ]
+    static let instance = DogViewModel()
+        
+    @Published var dogs = [Dog]()
     
-    func addDog(dog: Dog) {
+    private init() {}
+    
+    func add(dog: Dog, context: NSManagedObjectContext) throws {
+        let entity = DogEntity(context: context)
+        entity.id = UUID()
+        entity.name = dog.name
+        entity.breed = dog.breed
+        entity.gender = dog.gender
+        
+        entity.pictureData = dog.pictureData as NSData?
+        
+        if context.hasChanges {
+            try context.save()
+        }
         self.dogs.append(dog)
     }
+    
+    func delete(atOffsets indexSet: IndexSet, context: NSManagedObjectContext) {
+        dogs.remove(atOffsets: indexSet)
+    }
+
 }

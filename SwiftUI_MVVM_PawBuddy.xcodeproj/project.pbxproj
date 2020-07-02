@@ -11,14 +11,15 @@
 		C2B0AF1424ADE46800D47330 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF1324ADE46800D47330 /* Constants.swift */; };
 		C2B0AF1624ADE58200D47330 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF1524ADE58200D47330 /* Extensions.swift */; };
 		C2B0AF1824ADE92800D47330 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF1724ADE92800D47330 /* ListRowView.swift */; };
+		C2B0AF2124AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF1F24AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodeld */; };
+		C2B0AF2324AE22E900D47330 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF2224AE22E900D47330 /* Dog.swift */; };
+		C2B0AF4A24AE752C00D47330 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AF4924AE752C00D47330 /* DogViewModel.swift */; };
 		C2F5345424AB922D00E80AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5345324AB922D00E80AB2 /* AppDelegate.swift */; };
 		C2F5345624AB922D00E80AB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5345524AB922D00E80AB2 /* SceneDelegate.swift */; };
 		C2F5345824AB922D00E80AB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5345724AB922D00E80AB2 /* ContentView.swift */; };
 		C2F5345A24AB922F00E80AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2F5345924AB922F00E80AB2 /* Assets.xcassets */; };
 		C2F5345D24AB922F00E80AB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2F5345C24AB922F00E80AB2 /* Preview Assets.xcassets */; };
 		C2F5346024AB922F00E80AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F5345E24AB922F00E80AB2 /* LaunchScreen.storyboard */; };
-		C2F5346824AB935E00E80AB2 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5346724AB935E00E80AB2 /* Dog.swift */; };
-		C2F5346A24AB93AB00E80AB2 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5346924AB93AB00E80AB2 /* DogViewModel.swift */; };
 		C2F5346C24AB99D800E80AB2 /* NewDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5346B24AB99D800E80AB2 /* NewDogView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,9 @@
 		C2B0AF1324ADE46800D47330 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C2B0AF1524ADE58200D47330 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C2B0AF1724ADE92800D47330 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		C2B0AF2024AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PawBuddyCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		C2B0AF2224AE22E900D47330 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		C2B0AF4924AE752C00D47330 /* DogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		C2F5345024AB922D00E80AB2 /* SwiftUI_MVVM_PawBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_MVVM_PawBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F5345324AB922D00E80AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2F5345524AB922D00E80AB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +39,6 @@
 		C2F5345C24AB922F00E80AB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2F5345F24AB922F00E80AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2F5346124AB922F00E80AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2F5346724AB935E00E80AB2 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		C2F5346924AB93AB00E80AB2 /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		C2F5346B24AB99D800E80AB2 /* NewDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +67,7 @@
 		C2B0AF1A24ADECCD00D47330 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C2F5346924AB93AB00E80AB2 /* DogViewModel.swift */,
+				C2B0AF4924AE752C00D47330 /* DogViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -73,7 +75,8 @@
 		C2B0AF1B24ADECD700D47330 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C2F5346724AB935E00E80AB2 /* Dog.swift */,
+				C2B0AF2224AE22E900D47330 /* Dog.swift */,
+				C2B0AF1F24AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +88,15 @@
 				C2B0AF1524ADE58200D47330 /* Extensions.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		C2B0AF4B24AE788400D47330 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C2F5345324AB922D00E80AB2 /* AppDelegate.swift */,
+				C2F5345524AB922D00E80AB2 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		C2F5344724AB922D00E80AB2 = {
@@ -106,12 +118,11 @@
 		C2F5345224AB922D00E80AB2 /* SwiftUI_MVVM_PawBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				C2B0AF4B24AE788400D47330 /* Application */,
 				C2B0AF1C24ADECE400D47330 /* Common */,
 				C2B0AF1B24ADECD700D47330 /* Model */,
 				C2B0AF1A24ADECCD00D47330 /* ViewModel */,
 				C2B0AF1924ADECB900D47330 /* Views */,
-				C2F5345324AB922D00E80AB2 /* AppDelegate.swift */,
-				C2F5345524AB922D00E80AB2 /* SceneDelegate.swift */,
 				C2F5345924AB922F00E80AB2 /* Assets.xcassets */,
 				C2F5345E24AB922F00E80AB2 /* LaunchScreen.storyboard */,
 				C2F5346124AB922F00E80AB2 /* Info.plist */,
@@ -200,15 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F5345424AB922D00E80AB2 /* AppDelegate.swift in Sources */,
+				C2B0AF4A24AE752C00D47330 /* DogViewModel.swift in Sources */,
 				C2B0AF1624ADE58200D47330 /* Extensions.swift in Sources */,
 				C2F5345624AB922D00E80AB2 /* SceneDelegate.swift in Sources */,
-				C2F5346A24AB93AB00E80AB2 /* DogViewModel.swift in Sources */,
-				C2F5346824AB935E00E80AB2 /* Dog.swift in Sources */,
 				C2B0AF1224AD420800D47330 /* ImagePickerView.swift in Sources */,
+				C2B0AF2324AE22E900D47330 /* Dog.swift in Sources */,
 				C2F5345824AB922D00E80AB2 /* ContentView.swift in Sources */,
 				C2B0AF1824ADE92800D47330 /* ListRowView.swift in Sources */,
 				C2F5346C24AB99D800E80AB2 /* NewDogView.swift in Sources */,
 				C2B0AF1424ADE46800D47330 /* Constants.swift in Sources */,
+				C2B0AF2124AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +414,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2B0AF1F24AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2B0AF2024AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = C2B0AF2024AE07A200D47330 /* PawBuddyCoreDataModel.xcdatamodel */;
+			path = PawBuddyCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C2F5344824AB922D00E80AB2 /* Project object */;
 }

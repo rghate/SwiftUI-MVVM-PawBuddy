@@ -9,11 +9,14 @@
 import SwiftUI
 
 struct ListRowView: View {
-    @State var dog: Dog
+    var name: String
+    var breed: String?
+    var gender: String?
+    var pictureData: Data?
     
     var body: some View {
         HStack(spacing: 10) {
-            (dog.pictureData?.getPicture() ?? Image(defaultDogImage))
+            ((pictureData)?.getPicture() ?? Image(defaultDogImage))
                 .resizable()
                 .clipped()
                 .scaledToFill()
@@ -22,23 +25,23 @@ struct ListRowView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 50.0)
                         .strokeBorder(style: StrokeStyle(lineWidth: 0.5))
-                        .foregroundColor(.init(white: 0.5)))
+                        .foregroundColor(.white))
             
             VStack(alignment: .leading, spacing: 8) {
-                Text(dog.name)
+                Text(name )
                     .fontWeight(.medium)
                     .font(.system(size: 24))
-                Text(dog.breed)
+                Text(breed ?? "")
             }
             
             Spacer()
-            Text(dog.gender)
+            Text(gender ?? "")
         }
     }
 }
-
-struct ListRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListRowView(dog: Dog(name: "Test name", breed: "Test Breed", gender: "Male", pictureData: nil))
-    }
-}
+//
+//struct ListRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        ListRowView(dog: Dog(name: "Test name", breed: "Test Breed", gender: "Male", pictureData: nil))
+//    }
+//}
