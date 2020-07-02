@@ -18,7 +18,9 @@ struct ContentView: View {
                 ForEach(dogsVM.dogs) { dog in
                     ListRowView(dog: dog)
                 }
+                .onDelete(perform: delete)
                 .frame(height: 70)
+            
             }
             .navigationBarTitle("Paw Buddy")
             .navigationBarItems(trailing: Button(action: {
@@ -32,6 +34,11 @@ struct ContentView: View {
             }))
         }.navigationBarTitle("", displayMode: .inline)
     }
+    
+    func delete(at offset: IndexSet) {
+        dogsVM.dogs.remove(atOffsets: offset)
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
