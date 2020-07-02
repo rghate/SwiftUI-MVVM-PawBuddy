@@ -16,28 +16,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(dogsVM.dogs) { dog in
-                    HStack(spacing: 10) {
-                        Image(dog.thumbnail ?? "dog_logo")
-                            .resizable()
-                            .clipped()
-                            .scaledToFit()
-                            .frame(width: 60, height: 60)
-                            .clipShape(Circle())
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 50.0)
-                                    .strokeBorder(style: StrokeStyle(lineWidth: 0.5))
-                                    .foregroundColor(.init(white: 0.5)))
-                        
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(dog.name)
-                                .fontWeight(.medium)
-                                .font(.system(size: 24))
-                            Text(dog.breed)
-                        }
-
-                        Spacer()
-                        Text(dog.gender)
-                    }
+                    ListRowView(dog: dog)
                 }
                 .frame(height: 70)
             }

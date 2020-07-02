@@ -12,7 +12,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
     
     @Binding var isPresented: Bool
     
-    @Binding var selectedPickerImage: UIImage
+    @Binding var selectedPickerImageData: Data?
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let controller = UIImagePickerController()
@@ -35,7 +35,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[.originalImage] as? UIImage {
-                self.parent.selectedPickerImage = image
+                self.parent.selectedPickerImageData = image.jpegData(compressionQuality: 0)
             }
             self.parent.isPresented = false // to dismiss sheet
         }

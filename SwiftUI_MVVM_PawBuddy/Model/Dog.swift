@@ -14,5 +14,12 @@ struct Dog: Identifiable {
     let name: String
     let breed: String
     let gender: String
-    let thumbnail: String?
+    let pictureData: Data?
+    
+    init(name: String, breed: String, gender: String, pictureData: Data?) {
+        self.name = name
+        self.breed = breed
+        self.gender = gender
+        self.pictureData = pictureData
+    }
 }
